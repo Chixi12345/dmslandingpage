@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+:root {
+  /* Colors */
+  --first-color: #1a73e8;
+  --input-color: #808688;
+  --border-color: #dadce0;
+  --blue-color: #053582;
+  --white-color: #fff;
+  /* Fonts */
+
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+/* Base */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 0 100px 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--normal-font-size);
+  background: #f5f5f2;
+}
+/* Class for all buttons */
+.button {
+  padding: 13px 23px;
+  width: 126px;
+  height: 44px;
+  background: var(--blue-color);
+  border-radius: 10px;
+  color: var(--white-color);
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  border: none;
+}
+
+.button:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* splitting the body into two parts */
+.body_flex {
+  display: flex;
+  justify-content: space-between;
+}
+/* main logo */
+.header_logo {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/* working with the right hand side  */
+
+.right_flex {
+  margin-right: 100px;
+}
+
+.right_flex p {
+  margin-top: -15px;
+  margin-bottom: 40px;
+}
+
+/* two rectangle flex on the section */
+.flex_rectangle {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -15px;
+  margin-bottom: 40px;
+}
+.rectangle_1 {
+  width: 340px;
+  height: 6px;
+  left: 48px;
+  top: 48px;
+
+  background: var(--blue-color);
+  border-radius: 3px;
+}
+.rectangle_2 {
+  width: 160px;
+  height: 6px;
+  left: 48px;
+  top: 48px;
+
+  background: rgba(57, 14, 150, 0.08);
+  border-radius: 3px;
+}
+
+/* Working with the form */
+.i-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form {
+  width: 512px;
+  height: 733px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  background-color: var(--white-color);
+}
+
+/* Floating the first two inputs in the form */
+.form_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.sided_form {
+  width: 100%;
+}
+.margin_left {
+  margin-left: 5px;
+}
+
+.margin_right {
+  margin-right: 5px;
+}
+
+.form_div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+
+  background: var(--white-color);
+  border: 1px solid #e2e2ea;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.form_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+
+.form_label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 0.25rem;
+  background-color: var(--white-color);
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+
+.form_input:focus + .form_label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--input-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/* making the placeholder maintain its new position after user input details */
+.form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+.form_input:focus {
+  border: 1.5px solid var(--first-color);
+}
+/* Working with the bottom part of the form */
+.terms_paragraph {
+  line-height: 18px;
+  letter-spacing: 0.003em;
+  color: #252525;
+  padding-top: 20px;
+}
+
+.terms_paragraph a {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+.flex_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+.flex_bottom p {
+  margin-left: 40px;
+  margin-top: -5px;
+}
+
+.flex_bottom a {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.flex_bottom button {
+  margin-top: -15px;
+}
+
+/* Working with the left hand side */
+.left_flex {
+  margin: 30px 50px 0 50px;
+  padding: 50px;
+  text-align: center;
+}
+.left_flex h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.left_flex p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
